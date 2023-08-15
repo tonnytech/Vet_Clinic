@@ -99,6 +99,6 @@ I would like to thank Microverse for the training.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/tonnytech/Vet_Clinic) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
