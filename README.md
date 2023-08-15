@@ -54,8 +54,8 @@ Clone this [repository](https://github.com/tonnytech/Vet_Clinic.git) to your des
 👤 **Author1**
 
 - GitHub: [@tonnytech](https://github.com/Thoth1111)
-- Twitter: [@](https://twitter.com/tonnytei)
-- LinkedIn: [alwyn-androvelle](https://www.linkedin.com/in/tonnytei/)
+- Twitter: [@tonnytei](https://twitter.com/tonnytei)
+- LinkedIn: [Tonny Tei](https://www.linkedin.com/in/tonnytei/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
