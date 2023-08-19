@@ -242,30 +242,100 @@ SET
 
 ---------------------------------------------------------------
 --------------------------------------------------------------
--- What animals belong to Melody Pond?
-SELECT
-    owners.full_name AS owner,
-    animals.name AS animal
-FROM
-    animals
-    JOIN owners ON animals.owner_id = owners.id
-WHERE
-    owners.full_name = 'Melody Pond';
+INSERT INTO
+    vets (name, age, date_of_graduation)
+VALUES
+    ('William Tatcher', 45, '2000-04-23');
 
--- List of all animals that are pokemon (their type is Pokemon).
-SELECT
-    animals.name AS animal_name,
-    species.name AS species_name
-FROM
-    animals
-    JOIN species ON animals.species_id = species.id
-WHERE
-    species.name = 'Pokemon';
--- List all owners and their animals, remember to include those that don't own any animal.
-SELECT owners.full_name AS owner, animals.name AS animal
-FROM owners
-LEFT JOIN animals ON owners.id = animals.owner_id;
--- How many animals are there per species?
--- List all Digimon owned by Jennifer Orwell.
--- List all animals owned by Dean Winchester that haven't tried to escape.
--- Who owns the most animals?
+INSERT INTO
+    vets (name, age, date_of_graduation)
+VALUES
+    ('Maisy Smith', 26, '2019-01-17');
+
+INSERT INTO
+    vets (name, age, date_of_graduation)
+VALUES
+    ('Stephanie Mendez', 64, '1981-05-04');
+
+INSERT INTO
+    vets (name, age, date_of_graduation)
+VALUES
+    ('Jack Harkness', 38, '2008-06-08');
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+INSERT INTO
+    specializations (vet_id, species_id)
+VALUES
+    (
+        (
+            SELECT
+                id
+            FROM
+                vets
+            WHERE
+                name = 'William Tatcher'
+        ),
+        (
+            SELECT
+                id
+            FROM
+                species
+            WHERE
+                name = 'Pokemon'
+        )
+    ),
+    (
+        (
+            SELECT
+                id
+            FROM
+                vets
+            WHERE
+                name = 'Stephanie Mendez'
+        ),
+        (
+            SELECT
+                id
+            FROM
+                species
+            WHERE
+                name = 'Digimon'
+        )
+    ),
+    (
+        (
+            SELECT
+                id
+            FROM
+                vets
+            WHERE
+                name = 'Stephanie Mendez'
+        ),
+        (
+            SELECT
+                id
+            FROM
+                species
+            WHERE
+                name = 'Pokemon'
+        )
+    ),
+    (
+        (
+            SELECT
+                id
+            FROM
+                vets
+            WHERE
+                name = 'Jack Harkness'
+        ),
+        (
+            SELECT
+                id
+            FROM
+                species
+            WHERE
+                name = 'Digimon'
+        )
+    );
